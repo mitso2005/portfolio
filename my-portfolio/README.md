@@ -1,8 +1,10 @@
-# React + Vite
+# Welcome to Dimitri's Developer Portfolio (Work in Progress)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Checkout My Live Portfolio Here](https://dimitripetrakis.com/)
 
-Currently, two official plugins are available:
+Hey, thanks for checking out my portfolio. I made is site while learing react and tailwind for the first time. Feel free to fork this repo and use it as a template for your own developer portfolio.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Checkout My Socials!!**
+- [Instagram](https://www.instagram.com/dimitri_petrakis)
+- [LinkedIn](https://www.linkedin.com/in/dimitrios-petrakis-719443269/)
+- [Tiktok](https://www.tiktok.com/@dimitri_petrakis)
