@@ -50,7 +50,7 @@ function About() {
                     
                     {/* Countdown */}
                     <div className="text-1xl max-w-3xl mx-auto">
-                        <p> I'm currently {gradCountdown.days} days {gradCountdown.hours} hours {gradCountdown.minutes} minutes and {gradCountdown.seconds} seconds away from graduating <br></br>with my Computer Science degree from The University of Melbourne.</p>
+                        <p> I'm currently <span className="font-bold text-red-500">{gradCountdown.days} days, {gradCountdown.hours} hours, {gradCountdown.minutes} minutes, and {gradCountdown.seconds} seconds</span> away from graduating <br></br>with my Computer Science degree from The University of Melbourne.</p>
                     </div>
                 </div>
             </div>
