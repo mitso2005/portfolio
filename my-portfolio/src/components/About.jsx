@@ -30,9 +30,9 @@ function About() {
     }, [targetDate]);
 
     return (
-        <section id="about" className="py-50 flex items-center justify-center">
-            <div className="flex items-center space-x-25">
-                <div>
+        <section id="about" className="min-h-screen flex items-center justify-center">
+            <div className="flex items-center space-x-20">
+                <div className="pl-15">
                     {/* Circular Image */}
                     <img
                     src={profileImg}
@@ -41,7 +41,7 @@ function About() {
                     />
                 </div>
 
-                <div>
+                <div className="pr-15">
                     {/* Title and Subtitle */}
                     <h1 className="text-7xl font-bold mb-5 text-left">Hi, my name's Dimitri!</h1>
                     <h3 className="text-3xl font-medium mb-5 text-left">
