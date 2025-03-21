@@ -10,7 +10,7 @@ const Downloads = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Replace with your email service API endpoint
+        // Replace with email service API endpoint
         const response = await fetch('/api/subscribe', {
             method: 'POST',
             headers: {
@@ -27,7 +27,7 @@ const Downloads = () => {
     };
 
     return (
-        <div className="flex items-center justify-center h-1/2 bg-white">
+        <div className="flex items-center justify-center bg-white">
             <div className="bg-black p-8 rounded-lg shadow-lg w-full max-w-md">
                 <h2 className="text-white text-2xl mb-4">Get Your Free Notion Template</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -39,7 +39,7 @@ const Downloads = () => {
                             name="email"
                             value={email}
                             onChange={handleChange}
-                            className="w-full p-2 border border-gray-300 rounded"
+                            className="w-full p-2 border border-gray-300 rounded bg-black text-white"
                             required
                         />
                     </div>
