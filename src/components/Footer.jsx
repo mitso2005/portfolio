@@ -7,16 +7,16 @@ function Footer() {
       <div className="container mx-auto text-center space-y-4">
         {/* Social Media Links */}
         <div className="flex justify-center space-x-6">
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
+          <a href="https://www.instagram.com/dimitri_petrakis" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
             <FaInstagram size={24} />
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
+          <a href="https://www.linkedin.com/in/dimitrios-petrakis-719443269/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
             <FaLinkedin size={24} />
           </a>
-          <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
+          <a href="https://www.tiktok.com/@dimitri_petrakis" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
             <FaTiktok size={24} />
           </a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
+          <a href="https://github.com/mitso2005" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
             <FaGithub size={24} />
           </a>
         </div>
