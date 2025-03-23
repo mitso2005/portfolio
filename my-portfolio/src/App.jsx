@@ -5,6 +5,7 @@ import Downloads from "./components/Downloads";
 import Footer from "./components/Footer";
 import Project from "./components/Project";
 import DownloadDescription from "./components/DowloadDescription";
+import Work from "./components/Work";
 
 function App() {
   return (
@@ -37,6 +38,16 @@ function App() {
         <Project 
             title="Greenpad" 
             techStack="JavaScript, HTML, CSS"  
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-12 py-8 bg-white">
+        <h2 className="text-3xl font-bold mb-2">Relevant Work Experience</h2>
+        <Work
+            title="Web Developer"
+            company="YellaTerra"
+            time="2024 - Present" 
+            website="https://store.yellaterra.com.au/"
         />
       </div>
 
