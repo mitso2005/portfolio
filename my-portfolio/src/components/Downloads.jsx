@@ -27,19 +27,19 @@ const Downloads = () => {
     };
 
     return (
-        <div className="flex items-center justify-center bg-white">
-            <div className="bg-black p-8 rounded-lg shadow-lg w-full max-w-md">
-                <h2 className="text-white text-2xl mb-4">Start your tech job search today!</h2>
+        <div className="flex items-center justify-center">
+            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+                <h2 className="text-black text-2xl mb-4">Start your tech job search today!</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                        <label className="block text-white mb-2" htmlFor="email">Email:</label>
+                        <label className="block text-black mb-2" htmlFor="email">Email:</label>
                         <input
                             type="email"
                             id="email"
                             name="email"
                             value={email}
                             onChange={handleChange}
-                            className="w-full p-2 border border-gray-300 rounded bg-black text-white"
+                            className="w-full p-2 border border-gray-300 rounded bg-white text-black"
                             required
                         />
                     </div>
@@ -50,7 +50,7 @@ const Downloads = () => {
                         Get My Free Notion Template
                     </button>
                 </form>
-                {message && <p className="text-white mt-4">{message}</p>}
+                {message && <p className="text-black mt-4">{message}</p>}
             </div>
         </div>
     );
