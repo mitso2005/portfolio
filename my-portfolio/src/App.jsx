@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Project from "./components/Project";
 import DownloadDescription from "./components/DowloadDescription";
 import Work from "./components/Work";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
         />
       </div>
 
+      <Contact />
       <Footer />
     </div>
   );
