@@ -28,7 +28,7 @@ git clone https://github.com/your-username/portfolio.git
 Navigate to the project directory and install the required dependencies:
 ```bash
 cd portfolio
-npm install  # or yarn install
+npm install
 ```
 
 ### 4️⃣ Customise Your Portfolio
@@ -37,7 +37,7 @@ Open the project in your favourite code editor and start modifying the content, 
 ### 5️⃣ Run the Development Server
 To preview your portfolio locally, run:
 ```bash
-npm start  # or yarn start
+npm run dev
 ```
 This will start a local development server.
 
