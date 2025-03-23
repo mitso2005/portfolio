@@ -30,7 +30,7 @@ function About() {
     }, [targetDate]);
 
     return (
-        <section id="about" className="min-h-screen flex items-center justify-center">
+        <section id="about" className="min-h-screen flex items-center justify-center bg-white">
             <div className="flex items-center gap-20 px-12">
                 <div>
                     {/* Circular Image */}
