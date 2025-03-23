@@ -31,8 +31,8 @@ function About() {
 
     return (
         <section id="about" className="min-h-screen flex items-center justify-center">
-            <div className="flex items-center space-x-20">
-                <div className="pl-15">
+            <div className="flex items-center gap-20 px-12">
+                <div>
                     {/* Circular Image */}
                     <img
                     src={profileImg}
@@ -41,16 +41,32 @@ function About() {
                     />
                 </div>
 
-                <div className="pr-15">
+                <div>
                     {/* Title and Subtitle */}
                     <h1 className="text-7xl font-bold mb-5 text-left">Hi, my name's Dimitri!</h1>
                     <h3 className="text-3xl font-medium mb-5 text-left">
-                    I'm a student software developer and content creator.
+                    <span className="font-bold text-red-500">Software Developer · Content Creator</span>
                     </h3>
                     
                     {/* Countdown */}
-                    <div className="text-1xl max-w-3xl mx-auto">
-                        <p> I'm currently <span className="font-bold text-red-500">{gradCountdown.days} days, {gradCountdown.hours} hours, {gradCountdown.minutes} minutes, and {gradCountdown.seconds} seconds</span> away from graduating <br></br>with my Computer Science degree from The University of Melbourne.</p>
+                    <div className="text-1xl max-w-3xl mx-auto text-gray-600 mb-5">
+                        <p>
+                            I'm a passionate Student Software Developer and Tech Content Creator based out of Melbourne, currently <span className="font-bold text-red-500">{gradCountdown.days} days, {gradCountdown.hours} hours, {gradCountdown.minutes} minutes, and {gradCountdown.seconds} seconds</span> away from graduating with my Computer Science degree from The University of Melbourne.
+                        </p>
+                        <p>
+                            Right now I'm working as a <span className="font-bold text-red-500">Web Developer</span> at YellaTerra.
+                        </p>
+                    </div>
+
+                    {/* Resume Download Button */}
+                    <div className="mt-8">
+                        <a
+                            href="public/DimitriResume.pdf"
+                            download="DimitriResume.pdf"
+                            className="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition duration-300"
+                        >
+                            Download my resume
+                        </a>
                     </div>
                 </div>
             </div>

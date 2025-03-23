@@ -29,7 +29,7 @@ const Downloads = () => {
     return (
         <div className="flex items-center justify-center bg-white">
             <div className="bg-black p-8 rounded-lg shadow-lg w-full max-w-md">
-                <h2 className="text-white text-2xl mb-4">Get Your Free Notion Template</h2>
+                <h2 className="text-white text-2xl mb-4">Just imput your email and I'll send it straight to you!</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                         <label className="block text-white mb-2" htmlFor="email">Email:</label>
@@ -47,7 +47,7 @@ const Downloads = () => {
                         type="submit"
                         className="w-full bg-red-500 text-white p-2 rounded hover:bg-red-600"
                     >
-                        Submit
+                        Get My Free Notion Template
                     </button>
                 </form>
                 {message && <p className="text-white mt-4">{message}</p>}
