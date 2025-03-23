@@ -36,8 +36,7 @@ function App() {
             />
             <Project 
                 title="Greenpad" 
-                techStack="JavaScript, HTML, CSS" 
-                githubLink="coming soon.." 
+                techStack="JavaScript, HTML, CSS"  
             />
         </div>
 
