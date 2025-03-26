@@ -1,5 +1,6 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaTiktok, FaGithub } from "react-icons/fa";
+import { Link } from "react-scroll";  // Import Link from react-scroll
 
 function Footer() {
   return (
@@ -26,9 +27,15 @@ function Footer() {
           <ul className="flex justify-center space-x-6 text-sm">
             {["About", "Downloads", "Projects", "Work", "Contact"].map((item) => (
               <li key={item}>
-                <a href={`#${item.toLowerCase()}`} className="hover:text-red-500 transition">
+                <Link
+                  to={item.toLowerCase()} // Scroll to the corresponding section
+                  smooth={true} // Enable smooth scroll
+                  duration={100} // Scroll duration in milliseconds
+                  offset={-50} // Adjust the offset to account for the fixed navbar
+                  className="hover:text-red-500 transition"
+                >
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
