@@ -5,22 +5,27 @@ import { emailConfig } from '../config/email-config';
 const Downloads = () => {
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState('');
+    const [isInitialized, setIsInitialized] = useState(false);
 
     useEffect(() => {
-        emailjs.init(emailConfig.publicKey);
+        if (!emailConfig.publicKey) {
+            setStatus('error');
+            return;
+        }
+        
+        try {
+            emailjs.init(emailConfig.publicKey);
+            setIsInitialized(true);
+        } catch {
+            setStatus('error');
+        }
     }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('sending');
-        console.log('Attempting to send email to:', email);
 
         try {
-            console.log('EmailJS config:', {
-                serviceId: emailConfig.serviceId,
-                templateId: emailConfig.downloadTemplateId
-            });
-
             const result = await emailjs.send(
                 emailConfig.serviceId,
                 emailConfig.downloadTemplateId,
@@ -32,8 +37,6 @@ const Downloads = () => {
                 }
             );
             
-            console.log('EmailJS response:', result);
-
             if (result.status === 200) {
                 setStatus('success');
                 setEmail('');
@@ -41,7 +44,6 @@ const Downloads = () => {
                 throw new Error(`Failed with status: ${result.status}`);
             }
         } catch (error) {
-            console.error('EmailJS Error:', error);
             setStatus('error');
         }
     };
