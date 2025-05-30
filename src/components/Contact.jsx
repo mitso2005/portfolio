@@ -1,9 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { emailConfig } from '../config/email-config';
 
 const Contact = () => {
-    const form = useRef();
     const [email, setEmail] = useState('');
     const [topic, setTopic] = useState('');
     const [message, setMessage] = useState('');
@@ -14,14 +13,19 @@ const Contact = () => {
         setStatus('sending');
 
         try {
-            const result = await emailjs.sendForm(
+            const result = await emailjs.send(
                 emailConfig.serviceId,
                 emailConfig.contactTemplateId,
-                form.current,
+                {
+                    from_email: email,
+                    topic: topic,
+                    message: message,
+                    to_name: 'Dimitri', // Add your name here
+                },
                 emailConfig.publicKey
             );
-            
-            if (result.text === 'OK') {
+
+            if (result.status === 200) {
                 setStatus('success');
                 setEmail('');
                 setTopic('');
@@ -30,7 +34,7 @@ const Contact = () => {
                 throw new Error('Failed to send message');
             }
         } catch (error) {
-            console.error('Error:', error);
+            console.error('EmailJS Error:', error);
             setStatus('error');
         }
     };
@@ -46,7 +50,7 @@ const Contact = () => {
                 {status === 'error' && (
                     <div className="mb-4 text-red-600">Failed to send message. Please try again.</div>
                 )}
-                <form ref={form} onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="form-group">
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
                         <input

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { emailConfig } from '../config/email-config';
 
 const Downloads = () => {
     const [email, setEmail] = useState('');
@@ -10,18 +12,25 @@ const Downloads = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Replace with email service API endpoint
-        const response = await fetch('/api/subscribe', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email }),
-        });
+        try {
+            const result = await emailjs.send(
+                emailConfig.serviceId,
+                emailConfig.downloadTemplateId,
+                {
+                    to_email: email,
+                    template_link: "YOUR_NOTION_TEMPLATE_LINK"
+                },
+                emailConfig.publicKey
+            );
 
-        if (response.ok) {
-            setMessage('Thank you! The template has been sent to your email.');
-        } else {
+            if (result.status === 200) {
+                setMessage('Thank you! The template has been sent to your email.');
+                setEmail('');
+            } else {
+                throw new Error('Failed to send template');
+            }
+        } catch (error) {
+            console.error('EmailJS Error:', error);
             setMessage('There was an error. Please try again.');
         }
     };
