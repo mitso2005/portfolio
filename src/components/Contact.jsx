@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { emailConfig } from '../config/email-config';
-import { submitToGoogleSheets } from '../utils/googleSheets';
 
 const Contact = () => {
     const [email, setEmail] = useState('');
@@ -14,20 +13,16 @@ const Contact = () => {
         setStatus('sending');
 
         try {
-            // Send the contact form message
-            await Promise.all([
-                emailjs.send(
-                    emailConfig.serviceId,
-                    emailConfig.contactTemplateId,
-                    {
-                        from_email: email,
-                        topic: topic,
-                        message: message,
-                    },
-                    emailConfig.publicKey
-                ),
-                submitToGoogleSheets(email, topic, message)
-            ]);
+            await emailjs.send(
+                emailConfig.serviceId,
+                emailConfig.contactTemplateId,
+                {
+                    from_email: email,
+                    topic: topic,
+                    message: message,
+                },
+                emailConfig.publicKey
+            );
 
             setStatus('success');
             setEmail('');
