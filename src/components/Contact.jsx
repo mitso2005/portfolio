@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { emailConfig } from '../config/email-config';
 
 const Contact = () => {
+    const form = useRef();
     const [email, setEmail] = useState('');
     const [topic, setTopic] = useState('');
     const [message, setMessage] = useState('');
@@ -13,21 +14,21 @@ const Contact = () => {
         setStatus('sending');
 
         try {
-            await emailjs.send(
+            const result = await emailjs.sendForm(
                 emailConfig.serviceId,
                 emailConfig.contactTemplateId,
-                {
-                    from_email: email,
-                    topic: topic,
-                    message: message,
-                },
+                form.current,
                 emailConfig.publicKey
             );
-
-            setStatus('success');
-            setEmail('');
-            setTopic('');
-            setMessage('');
+            
+            if (result.text === 'OK') {
+                setStatus('success');
+                setEmail('');
+                setTopic('');
+                setMessage('');
+            } else {
+                throw new Error('Failed to send message');
+            }
         } catch (error) {
             console.error('Error:', error);
             setStatus('error');
@@ -45,12 +46,13 @@ const Contact = () => {
                 {status === 'error' && (
                     <div className="mb-4 text-red-600">Failed to send message. Please try again.</div>
                 )}
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form ref={form} onSubmit={handleSubmit} className="space-y-4">
                     <div className="form-group">
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
                         <input
                             type="email"
                             id="email"
+                            name="from_email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
@@ -62,6 +64,7 @@ const Contact = () => {
                         <input
                             type="text"
                             id="topic"
+                            name="topic"
                             value={topic}
                             onChange={(e) => setTopic(e.target.value)}
                             required
@@ -72,6 +75,7 @@ const Contact = () => {
                         <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
                         <textarea
                             id="message"
+                            name="message"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             required

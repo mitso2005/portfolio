@@ -1,6 +1,6 @@
 export const emailConfig = {
-    publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
-    serviceId: process.env.REACT_APP_EMAILJS_SERVICE_ID,
-    contactTemplateId: process.env.REACT_APP_CONTACT_TEMPLATE_ID,
-    autoresponseTemplateId: process.env.REACT_APP_AUTORESPONSE_TEMPLATE_ID
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    contactTemplateId: import.meta.env.VITE_CONTACT_TEMPLATE_ID,
+    autoresponseTemplateId: import.meta.env.VITE_AUTORESPONSE_TEMPLATE_ID
 };
