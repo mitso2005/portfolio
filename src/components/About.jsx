@@ -61,8 +61,8 @@ function About() {
                     {/* Resume Download Button */}
                     <div className="mt-8">
                         <a
-                            href="public/DimitriResume.pdf"
-                            download="DimitriResume.pdf"
+                            href="/DimitriResume.pdf"
+                            download
                             className="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition duration-300"
                         >
                             Download my resume
