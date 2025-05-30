@@ -5,7 +5,7 @@ import { Link } from "react-scroll";  // Import Link from react-scroll
 function Footer() {
   return (
     <footer className="bg-black text-white py-6">
-      <div className="container mx-auto text-center space-y-4">
+      <div className="container mx-auto px-4 text-center space-y-4">
         {/* Social Media Links */}
         <div className="flex justify-center space-x-6">
           <a href="https://www.instagram.com/dimitri_petrakis" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">

@@ -30,26 +30,26 @@ function About() {
     }, [targetDate]);
 
     return (
-        <section id="about" className="min-h-screen flex items-center justify-center bg-white">
-            <div className="flex items-center gap-20 px-12">
-                <div>
+        <section id="about" className="min-h-screen flex items-center justify-center bg-white py-20">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-20 max-w-7xl mx-auto px-4">
+                <div className="w-48 md:w-80">
                     {/* Circular Image */}
                     <img
                     src={profileImg}
                     alt="Dimitri"
-                    className="w-80 h-80 rounded-full object-cover"
+                    className="w-full h-full rounded-full object-cover"
                     />
                 </div>
 
-                <div>
+                <div className="text-center md:text-left">
                     {/* Title and Subtitle */}
-                    <h1 className="text-7xl font-bold mb-5 text-left">Hi, my name's Dimitri!</h1>
-                    <h3 className="text-3xl font-medium mb-5 text-left">
+                    <h1 className="text-4xl md:text-7xl font-bold mb-3 md:mb-5">Hi, my name's Dimitri!</h1>
+                    <h3 className="text-xl md:text-3xl font-medium mb-3 md:mb-5">
                     <span className="font-bold text-red-500">Software Developer · Content Creator</span>
                     </h3>
                     
                     {/* Countdown */}
-                    <div className="text-1xl max-w-3xl mx-auto text-gray-600 mb-5">
+                    <div className="text-sm md:text-base max-w-3xl mx-auto text-gray-600 mb-5">
                         <p>
                             I'm a passionate Student Software Developer and Tech Content Creator based out of Melbourne, currently <span className="font-bold text-red-500">{gradCountdown.days} days, {gradCountdown.hours} hours, {gradCountdown.minutes} minutes, and {gradCountdown.seconds} seconds</span> away from graduating with my Computer Science degree from The University of Melbourne.
                         </p>

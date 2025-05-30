@@ -1,7 +1,7 @@
 const Work = ({ title, company, time, website}) => {
 
     return (
-        <div className="flex justify-between items-center border-b border-gray-300 py-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-300 py-4 gap-2">
             {/* Left: Company & Title */}
             <div>
                 <h3 className="text-lg font-semibold">{title}</h3>
@@ -11,7 +11,7 @@ const Work = ({ title, company, time, website}) => {
                 </a>
             </div>
 
-            <p className=" text-gray-400">{time}</p>
+            <p className="text-sm text-gray-400">{time}</p>
         </div>
     );
 };
