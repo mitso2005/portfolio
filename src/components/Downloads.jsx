@@ -7,7 +7,6 @@ const Downloads = () => {
     const [status, setStatus] = useState('');
 
     useEffect(() => {
-        console.log('Initializing EmailJS with:', emailConfig.publicKey);
         emailjs.init(emailConfig.publicKey);
     }, []);
 
