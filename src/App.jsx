@@ -9,6 +9,7 @@ import Project from "./components/Project";
 import DownloadDescription from "./components/DowloadDescription";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
+import ResumeButton from "./components/ResumeButton";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Suspense fallback={<LoadingSpinner />}>
         <div className="mx-auto">
           <Navbar />
+          <ResumeButton />
           <div className="container mx-auto px-4 lg:px-8">
             <section id="about">
               <About />

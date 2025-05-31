@@ -88,17 +88,6 @@ function About() {
                             </div>
                         </div>
                     </div>
-
-                    {/* Resume Download Button */}
-                    <div className="mt-8">
-                        <a
-                            href="/DimitriResume.pdf"
-                            download
-                            className="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition duration-300"
-                        >
-                            Download my resume
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
