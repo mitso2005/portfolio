@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import LoadingSpinner from "./components/LoadingSpinner";
 import Navbar from "./components/Navbar";
@@ -12,6 +12,21 @@ import Contact from "./components/Contact";
 import ResumeButton from "./components/ResumeButton";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate checking if all resources are loaded
+    window.onload = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000); // Minimum loading time of 1 second
+    };
+  }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <ErrorBoundary>
       <Suspense fallback={<LoadingSpinner />}>
