@@ -129,10 +129,6 @@ The template is fully responsive and optimized for:
 - Tablets
 - Desktop screens
 
-## 📄 License
-
-This project is open source and available under the MIT License.
-
 ## 🤝 Contributing
 
 Feel free to fork this repository and submit pull requests. For major changes, please open an issue first.
