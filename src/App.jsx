@@ -15,12 +15,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate checking if all resources are loaded
-    window.onload = () => {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 1000); // Minimum loading time of 1 second
-    };
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
