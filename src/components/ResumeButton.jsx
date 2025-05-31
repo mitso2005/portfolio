@@ -2,7 +2,7 @@ import React from 'react';
 
 function ResumeButton() {
   return (
-    <div className="fixed bottom-6 left-6 z-50">
+    <div className="fixed bottom-6 left-4 z-50">
       <a
         href="/DimitriResume.pdf"
         download

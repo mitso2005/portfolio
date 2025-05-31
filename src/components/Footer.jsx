@@ -9,17 +9,17 @@ function Footer() {
         <div className="text-center space-y-8 sm:space-y-4">
           {/* Social Media Links */}
           <div className="flex justify-center space-x-6 sm:pt-0">
-            <a href="https://www.instagram.com/dimitri_petrakis" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
-              <FaInstagram size={24} />
+            <a href="https://github.com/mitso2005" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
+              <FaGithub size={24} />
             </a>
             <a href="https://www.linkedin.com/in/dimitrios-petrakis-719443269/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
               <FaLinkedin size={24} />
             </a>
+            <a href="https://www.instagram.com/dimitri_petrakis" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
+              <FaInstagram size={24} />
+            </a>
             <a href="https://www.tiktok.com/@dimitri_petrakis" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
               <FaTiktok size={24} />
-            </a>
-            <a href="https://github.com/mitso2005" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition">
-              <FaGithub size={24} />
             </a>
           </div>
 

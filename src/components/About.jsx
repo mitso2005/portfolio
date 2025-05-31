@@ -50,18 +50,21 @@ function About() {
                 <div className="text-center md:text-left">
                     {/* Title and Subtitle */}
                     <h1 className="text-4xl md:text-7xl font-bold mb-3 md:mb-5">Hi, my name's Dimitri!</h1>
-                    <h3 className="text-xl md:text-3xl font-medium mb-3 md:mb-5">
-                    <span className="font-bold text-red-500">Software Developer · Content Creator</span>
+                    <h3 className="text-1xl md:text-3xl font-medium mb-3 md:mb-5">
+                    <span className="font-bold text-gray-600">Software Developer · Content Creator</span>
                     </h3>
                 
                     
                     {/* Countdown */}
                     <div className="text-sm md:text-base max-w-3xl mx-auto text-gray-600 mb-5">
                         <p>
-                            I'm a passionate Student Software Developer and Tech Content Creator based out of Melbourne, currently <span className="font-bold text-red-500">{gradCountdown.days} days, {gradCountdown.hours} hours, {gradCountdown.minutes} minutes, and {gradCountdown.seconds} seconds</span> away from graduating with my Computer Science degree from The University of Melbourne.
+                            I'm a passionate Software Developer and Tech Content Creator based out of Melbourne, Australia.
                         </p>
                         <p>
-                            Right now I'm working as a <span className="font-bold text-red-500">Web Developer</span> at YellaTerra.
+                            I'm currently <span className="font-bold text-red-500">{gradCountdown.days} days, {gradCountdown.hours} hours, {gradCountdown.minutes} minutes, and {gradCountdown.seconds} seconds</span> away from finishing my CS degree.
+                        </p>
+                        <p className="my-3">
+                            Right now I'm working as a <span className="font-bold text-red-500">Web Developer</span> @ YellaTerra.
                         </p>
                     </div>
 
