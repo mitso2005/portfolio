@@ -73,6 +73,12 @@ function App() {
               <div className="max-w-7xl mx-auto px-4 py-8 bg-white">
                 <h2 className="text-3xl font-bold mb-2">Relevant Work Experience</h2>
                 <Work
+                  title="Front-end Engineer"
+                  company="CISSA (Computing and Information Systems Students Association)"
+                  time="2025 - Present"
+                  website="https://cissa.org.au/"
+                />
+                <Work
                   title="Web Developer"
                   company="YellaTerra"
                   time="2024 - Present"
