@@ -53,8 +53,12 @@ function App() {
               <div className="max-w-7xl mx-auto px-4 py-8 bg-white">
                 <h2 className="text-3xl font-bold mb-2">Projects</h2>
                 <Project
+                  title="Between Friends"
+                  techStack="React Native, Firebase, Expo, TypeScript, Google Maps API"
+                />
+                <Project
                   title="This Portfolio!"
-                  techStack="React.js, Tailwind CSS"
+                  techStack="React.js, Tailwind CSS, EmailJS"
                   githubLink="https://github.com/mitso2005/portfolio"
                 />
                 <Project
